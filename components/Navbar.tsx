@@ -25,6 +25,9 @@ export default function Navbar() {
           <Link href="#sobre" className={`${geist.className} hover:underline text-white`}>Sobre</Link>
         </li>
         <li>
+          <Link href="#skills" className={`${geist.className} hover:underline text-white`}>Skills</Link>
+        </li>
+        <li>
           <Link href="#projetos" className={`${geist.className} hover:underline text-white`}>Projetos</Link>
         </li>
         <li>

@@ -3,6 +3,9 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import Hero from "../components/sections/Hero";
 import About from "../components/sections/About";
+import Skills from "../components/sections/Skills";
+import Projects from "../components/sections/Projects";
+import Contact from "../components/sections/Contact";
 import Cursor from "../components/Cursor";
 import { Geist } from 'next/font/google';
 
@@ -15,11 +18,14 @@ const geist = Geist({
 
 export default function Home() {
   return (
-    <div className={geist.className} id="home">
+    <div className={`${geist.className} bg-black min-h-screen`}>
       <Cursor />
       <Navbar />
       <Hero />
       <About />
+      <Skills />
+      <Projects />
+      <Contact />
     </div>
   );
 }
