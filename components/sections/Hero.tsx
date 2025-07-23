@@ -1,10 +1,13 @@
 "use client";
 import React from "react";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 import { Unbounded } from 'next/font/google';
 import { IconArrowUpRight, IconBrandLinkedin, IconBrandGithub } from "@tabler/icons-react";
 import { Button } from "@/components/ui/button";
+import BlurText from "../ui/BlurText/BlurText";
+import Beams from "../ui/Beams/Beams";
+import Navbar from "../Navbar";
 
 // ===== CONFIGURAÇÃO DAS FONTES =====
 const unbounded = Unbounded({
@@ -15,27 +18,43 @@ const unbounded = Unbounded({
 
 export default function Hero() {
   return (
-    <section id="hero" className="bg-foreground relative w-full min-h-screen flex items-center justify-center overflow-hidden">
-      <div className="absolute h-full w-full bg-black"><div className="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]"></div><div className="absolute left-0 right-0 top-[-10%] h-[1000px] w-[1000px] rounded-full bg-[radial-gradient(circle_400px_at_50%_300px,#fbfbfb36,#000)]"></div></div>
+    <section id="hero" className="bg-foreground relative w-full min-h-screen flex items-center justify-center overflow-hidden scroll-mt-28">
+      <Navbar />
+      <div style={{ width: '100%', height: '100vh', position: 'relative' }}>
+        <Beams
+          beamWidth={3}
+          beamHeight={30}
+          beamNumber={20}
+          lightColor="#f67800"
+          speed={5}
+          noiseIntensity={1.75}
+          scale={0.2}
+          rotation={30}
+        />
+      </div>
       {/* ===== CONTEÚDO CENTRAL ===== */}
-      <div className="absolute z-10 flex flex-col items-center justify-center px-4">
+      <div className="absolute z-10 flex flex-col items-center justify-center px-4" data-aos="fade-up">
         {/* ===== TÍTULO FIXO ===== */}
-        <h2 className="text-4xl font-semibold mb-4 text-center text-white">
-          <span className="text-[6rem] text-10xl font-[900px]">Otavio Lago!</span>
-        </h2>
+        <BlurText
+          text="Olá, eu sou o Otavio Lago!"
+          delay={150}
+          animateBy="words"
+          direction="top"
+          className="text-[4rem] font-[600] text-center text-white"
+        />
         {/* ===== DESCRIÇÃO ===== */}
-        <p className="text-base text-gray-300 max-w-2xl text-center mb-6">
-          Sou um desenvolvedor apaixonado por tecnologia, criando soluções criativas e eficientes. Bem-vindo ao meu portfólio!
-        </p>
-        {/* ===== BOTÕES CTA ===== */}
-        <div className="flex gap-3 items-center">
+          <p className="text-lg text-gray-300 max-w-2xl text-center mb-6">
+            Sou um desenvolvedor apaixonado por tecnologia, criando soluções criativas e eficientes. Bem-vindo ao meu portfólio!
+          </p>
+        {/* ===== BOTÕES ===== */}
+        <div className="flex gap-3 items-center" data-aos="fade-right">
           <Link href="https://www.linkedin.com/in/otaviorlago/" target="_blank">
-            <Button variant="secondary" size="sm" className="flex items-center gap-2 active:bg-blue-300 cursor-pointer">
+            <Button variant="secondary" size="sm" className="text-white flex items-center gap-2 hover:bg-white/20 hover:scale-105 transition-all active:bg-orange-300 cursor-pointer backdrop-filter backdrop-blur-[10px] bg-white/5 bg-opacity-20 border-1 border-white/20">
               <IconBrandLinkedin /> Linkedin <IconArrowUpRight />
             </Button>
           </Link>
           <Link href="https://github.com/Taviin7" target="_blank">
-            <Button variant="secondary" size="sm" className="flex items-center gap-2 active:bg-orange-300 cursor-pointer">
+            <Button variant="secondary" size="sm" className="text-white flex items-center gap-2 hover:bg-white/20 hover:scale-105 transition-all duration-300 active:bg-orange-300 cursor-pointer backdrop-filter backdrop-blur-[10px] bg-white/5 bg-opacity-20 border-1 border-white/20">
               <IconBrandGithub /> GitHub <IconArrowUpRight />
             </Button>
           </Link>

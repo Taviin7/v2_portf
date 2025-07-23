@@ -19,8 +19,8 @@ export default function Cursor() {
     };
 
     // Esconder cursor do sistema
-    document.body.style.cursor = 'none';
-    document.documentElement.style.cursor = 'none';
+    //document.body.style.cursor = 'none';
+    //document.documentElement.style.cursor = 'none';
 
     // Adicionar event listeners
     window.addEventListener('mousemove', updateMousePosition);

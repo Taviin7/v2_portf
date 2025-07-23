@@ -10,24 +10,24 @@ const unbounded = Unbounded({
 
 export default function Projects() {
     return (
-        <section id="projects" className="bg-[#000] relative w-full flex items-center justify-center py-20">
+        <section id="projects" className="bg-[#000] relative w-full flex items-center justify-center py-20 border-t border-white/10 scroll-mt-10">
             <div className="container mx-auto px-4">
                 {/* ===== TÍTULO DA SEÇÃO ===== */}
-                <div className="text-center mb-10">
+                <div className="text-center mb-10" data-aos="fade-up">
                     <h2 className={`${unbounded.className} text-3xl font-bold text-white mb-4`}>
                         Projetos
                     </h2>
-                    <div className="w-24 h-1 bg-blue-600 mx-auto"></div>
+                    <div className="w-24 h-1 bg-[#f67800] mx-auto"></div>
                 </div>
 
                 {/* ===== DESCRIÇÃO CURTA ===== */}
-                <div className="text-center mb-10">
+                <div className="text-center mb-10" data-aos="fade-up">
                     <p className="text-gray-300 leading-relaxed max-w-2xl mx-auto">
                         Aqui você pode ver alguns dos meus projetos.
                     </p>
                 </div>
 
-                <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3" data-aos="flip-up">
                     <ProjectCard
                         title="E-commerce Platform"
                         description="A full-stack e-commerce platform built with Next.js, Prisma, and Stripe integration."

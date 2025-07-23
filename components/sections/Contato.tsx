@@ -10,14 +10,14 @@ const unbounded = Unbounded({
 
 export default function Contato() {
   return (
-    <section id="contato" className="bg-[#000] relative w-full flex items-center justify-center py-20">
-      <div className="container mx-auto px-4">
+    <section id="contato" className="bg-[#000] relative w-full flex items-center justify-center py-20 border-t border-white/10 scroll-mt-10">
+      <div className="container mx-auto px-4" data-aos="fade-down">
         {/* ===== TÍTULO DA SEÇÃO ===== */}
         <div className="text-center mb-10">
           <h2 className={`${unbounded.className} text-3xl font-bold text-white mb-4`}>
             Contato
           </h2>
-          <div className="w-24 h-1 bg-blue-600 mx-auto"></div>
+          <div className="w-24 h-1 bg-[#f67800] mx-auto"></div>
         </div>
 
         {/* ===== DESCRIÇÃO CURTA ===== */}

@@ -1,13 +1,15 @@
 import Link from "next/link";
 import { Unbounded, Geist } from 'next/font/google';
+import Image from "next/image";
+import { IconIcons, IconProtocol, IconBrandDcos} from '@tabler/icons-react';
 
-const unbounded = Unbounded({ 
+const unbounded = Unbounded({
   subsets: ['latin'],
   weight: ['400', '500', '600', '700', '800', '900'],
   display: 'swap',
 });
 
-const geist = Geist({ 
+const geist = Geist({
   subsets: ['latin'],
   weight: ['400', '500', '600', '700', '800', '900'],
   display: 'swap',
@@ -15,19 +17,24 @@ const geist = Geist({
 
 export default function Navbar() {
   return (
-    <nav className="w-full flex items-center justify-between py-6 px-15 shadow-md fixed top-0 left-0 z-50 backdrop-filter backdrop-blur-sm bg-opacity-0">
-      <div className={`${geist.className} font-bold text-xl text-white`}>Meu Portfólio</div>
+    <nav className="w-5xl flex items-center justify-between py-4 px-15 shadow-md fixed top-5 left-35 z-50 backdrop-filter backdrop-blur-[10px] bg-white/5 bg-opacity-20 rounded-full border-1 border-white/20" data-aos="fade-down">
+      <div className={`${geist.className} font-bold text-xl text-white`}>
+        <IconBrandDcos size={32} />
+      </div>
       <ul className="flex gap-6">
-        <li>
-          <Link href="#home" className={`${geist.className} hover:underline text-white`}>Início</Link>
+        <li className="hover:scale-105 transition-all duration-300">
+          <Link href="#hero" className={`${geist.className} hover:underline text-white`}>Início</Link>
         </li>
-        <li>
-          <Link href="#sobre" className={`${geist.className} hover:underline text-white`}>Sobre</Link>
+        <li className="hover:scale-105 transition-all duration-300">
+          <Link href="#about" className={`${geist.className} hover:underline text-white`}>Sobre</Link>
         </li>
-        <li>
-          <Link href="#projetos" className={`${geist.className} hover:underline text-white`}>Projetos</Link>
+        <li className="hover:scale-105 transition-all duration-300">
+          <Link href="#skillset" className={`${geist.className} hover:underline text-white`}>Skillset</Link>
         </li>
-        <li>
+        <li className="hover:scale-105 transition-all duration-300">
+          <Link href="#projects" className={`${geist.className} hover:underline text-white`}>Projetos</Link>
+        </li>
+        <li className="hover:scale-105 transition-all duration-300">
           <Link href="#contato" className={`${geist.className} hover:underline text-white`}>Contato</Link>
         </li>
       </ul>

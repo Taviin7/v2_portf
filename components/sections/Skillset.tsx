@@ -43,21 +43,21 @@ const sizeVariants = [
 
 export default function Skillset() {
   return (
-    <section id="skillset" className="bg-[#000] relative w-full flex items-center justify-center py-20">
-      <div className="container mx-auto px-4">
+    <section id="skillset" className="bg-[#000] relative w-full flex items-center justify-center py-20 border-t border-white/10 scroll-mt-10">
+      <div className="container mx-auto px-4" data-aos="fade-up-right">
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-4">
             <h2 className={`${unbounded.className} text-3xl font-bold text-white mb-2`}>
               Skillset
             </h2>
-            <div className="w-24 h-1 bg-blue-600 mx-auto"></div>
+            <div className="w-24 h-1 bg-[#f67800] mx-auto"></div>
           </div>
           <div className="text-center mb-8">
             <p className="text-gray-300 leading-relaxed max-w-2xl mx-auto">
               Principais tecnologias e ferramentas que utilizo regularmente.
             </p>
           </div>
-          <div className="flex flex-wrap gap-3 justify-center">
+          <div className="flex flex-wrap gap-3 justify-center" data-aos="fade-up-left">
             {skills.map((skill, idx) => (
               <Badge
                 key={idx}

@@ -8,5 +8,5 @@ module.exports = {
   
   // ===== PLUGINS =====
   // Plugin para aspect-ratio utilities
-  plugins: [require("@tailwindcss/aspect-ratio")],
+  plugins: [require("@tailwindcss/aspect-ratio"),],
 }; 
