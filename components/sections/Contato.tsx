@@ -35,17 +35,12 @@ export default function Contato() {
               <li className="flex items-center gap-3">
                 <FaEnvelope className="text-blue-400 text-xl" />
                 <span>Email:</span>
-                <a href="mailto:seuemail@email.com" className="text-blue-400 hover:underline break-all">seuemail@email.com</a>
-              </li>
-              <li className="flex items-center gap-3">
-                <FaPhoneAlt className="text-blue-400 text-xl" />
-                <span>Telefone:</span>
-                <a href="tel:+5511999999999" className="text-blue-400 hover:underline">(11) 99999-9999</a>
+                <a href="otaviorl711@gmail.com" className="text-blue-400 hover:underline break-all">otaviorl711@gmail.com</a>
               </li>
               <li className="flex items-center gap-3">
                 <FaLinkedin className="text-blue-400 text-xl" />
                 <span>LinkedIn:</span>
-                <a href="https://linkedin.com/in/seulinkedin" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">/seulinkedin</a>
+                <a href="https://www.linkedin.com/in/otaviorlago/" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">/otaviorlago</a>
               </li>
               {/* Adicione outros contatos aqui */}
             </ul>

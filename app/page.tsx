@@ -31,7 +31,7 @@ export default function Home() {
   }, []);
   return (
     <div className={`${figtree.className} text-lg`}>
-      <Cursor />
+      {/* <Cursor /> */}
       <Hero />
       <About />
       <Skillset />

@@ -1,6 +1,9 @@
 import React from 'react'
 import ProjectCard from '../Project-Card'
 import { Unbounded } from 'next/font/google';
+import anagrama from '@/public/assets/anagrama.png';
+import proveit from '@/public/assets/proveit.png';
+import quickjobs from '@/public/assets/quick-jobs.jpg';
 
 const unbounded = Unbounded({
     subsets: ['latin'],
@@ -23,31 +26,31 @@ export default function Projects() {
                 {/* ===== DESCRIÇÃO CURTA ===== */}
                 <div className="text-center mb-10" data-aos="fade-up">
                     <p className="text-gray-300 leading-relaxed max-w-2xl mx-auto">
-                        Aqui você pode ver alguns dos meus projetos.
+                        Aqui você pode ver alguns dos meus projetos feitos durante minha jornada como desenvolvedor.
                     </p>
                 </div>
 
-                <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3" data-aos="flip-up">
+                <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3" data-aos="fade-up">
                     <ProjectCard
-                        title="E-commerce Platform"
-                        description="A full-stack e-commerce platform built with Next.js, Prisma, and Stripe integration."
-                        image="/placeholder.svg?height=400&width=600"
-                        link="https://github.com"
-                        tags={["Next.js", "Prisma", "Stripe"]}
+                        title="ProveIt"
+                        description="App desenvolvido em React Native e C#, com o objetivo de auxiliar o usuário com sua alimentação em seu ambiente doméstico."
+                        image={proveit.src}
+                        link="https://github.com/Taviin7/App-Proveit"
+                        tags={["React Native", "C#", "MySQL"]}
                     />
                     <ProjectCard
-                        title="Task Management App"
-                        description="A real-time task management application with team collaboration features."
-                        image="/placeholder.svg?height=400&width=600"
-                        link="https://github.com"
-                        tags={["React", "Node.js", "Socket.io"]}
+                        title="QuickJobs"
+                        description="Site de buscas e divulgação de empregos, com uma interface de fácil interatividade, com integração a API, para acesso ao banco de dados."
+                        image={quickjobs.src}
+                        link="https://github.com/Taviin7/quickjobs"
+                        tags={["React", "MySQL", "API"]}
                     />
                     <ProjectCard
-                        title="AI Chat Interface"
-                        description="An AI-powered chat interface with natural language processing capabilities."
-                        image="/placeholder.svg?height=400&width=600"
-                        link="https://github.com"
-                        tags={["OpenAI", "Next.js", "TailwindCSS"]}
+                        title="Anagrama"
+                        description="Protótipo de um jogo desenvolvido em Windows Forms em C#, cuja o sistema exibe letras para que o usuário possa formar palavras."
+                        image={anagrama.src}
+                        link="https://github.com/Taviin7/anagrama"
+                        tags={["C#", "Windows Forms"]}
                     />
                 </div>
             </div>
