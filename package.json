@@ -13,6 +13,7 @@
     "@radix-ui/react-slot": "^1.2.3",
     "@react-three/drei": "^10.6.0",
     "@react-three/fiber": "^9.2.0",
+    "@splinetool/react-spline": "^4.1.0",
     "@tabler/icons-react": "^3.34.0",
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "aos": "^2.3.4",

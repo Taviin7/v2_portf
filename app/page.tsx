@@ -3,12 +3,12 @@ import React, { useEffect, useRef } from "react";
 import Hero from "../components/sections/Hero";
 import About from "../components/sections/About";
 import Skillset from "../components/sections/Skillset";
-import Cursor from "../components/Cursor";
+import Cursor from "../components/ui/Cursor";
 import Projects from "../components/sections/Projects";
 import Contato from "../components/sections/Contato";
-import Footer from "../components/footer";
+import Footer from "../components/ui/footer";
 import { Geist, Figtree } from 'next/font/google';
-import FramerSpotlight from "@/components/framer-spotlight";
+import FramerSpotlight from "@/components/ui/framer-spotlight";
 import AOS from "aos";
 import "aos/dist/aos.css";
 

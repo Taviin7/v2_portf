@@ -1,5 +1,5 @@
 import React from 'react'
-import ProjectCard from '../Project-Card'
+import ProjectCard from '../ui/Project-Card'
 import { Unbounded } from 'next/font/google';
 import anagrama from '@/public/assets/anagrama.png';
 import proveit from '@/public/assets/proveit.png';
@@ -17,7 +17,7 @@ export default function Projects() {
             <div className="container mx-auto px-4">
                 {/* ===== TÍTULO DA SEÇÃO ===== */}
                 <div className="text-center mb-10" data-aos="fade-up">
-                    <h2 className={`${unbounded.className} text-3xl font-bold text-white mb-4`}>
+                    <h2 className={`${unbounded.className} text-3xl font-bold text-gray-300 mb-4`}>
                         Projetos
                     </h2>
                     <div className="w-24 h-1 bg-[#f67800] mx-auto"></div>
@@ -25,7 +25,7 @@ export default function Projects() {
 
                 {/* ===== DESCRIÇÃO CURTA ===== */}
                 <div className="text-center mb-10" data-aos="fade-up">
-                    <p className="text-gray-300 leading-relaxed max-w-2xl mx-auto">
+                    <p className="text-gray-400 leading-relaxed max-w-2xl mx-auto">
                         Aqui você pode ver alguns dos meus projetos feitos durante minha jornada como desenvolvedor.
                     </p>
                 </div>

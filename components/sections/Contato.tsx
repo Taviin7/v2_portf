@@ -14,7 +14,7 @@ export default function Contato() {
       <div className="container mx-auto px-4" data-aos="fade-down">
         {/* ===== TÍTULO DA SEÇÃO ===== */}
         <div className="text-center mb-10">
-          <h2 className={`${unbounded.className} text-3xl font-bold text-white mb-4`}>
+          <h2 className={`${unbounded.className} text-3xl font-bold text-gray-300 mb-4`}>
             Contato
           </h2>
           <div className="w-24 h-1 bg-[#f67800] mx-auto"></div>
@@ -22,7 +22,7 @@ export default function Contato() {
 
         {/* ===== DESCRIÇÃO CURTA ===== */}
         <div className="text-center mb-10">
-          <p className="text-gray-300 leading-relaxed max-w-2xl mx-auto">
+          <p className="text-gray-400 leading-relaxed max-w-2xl mx-auto">
             Tem interesse em trabalhar comigo ou quer bater um papo? Preencha o formulário abaixo e entrarei em contato!
           </p>
         </div>
@@ -30,7 +30,7 @@ export default function Contato() {
         <div className="max-w-4xl mx-auto md:flex md:space-x-12">
           {/* ===== CONTATOS ===== */}
           <div className="md:w-2/4 mt-10 md:mt-0 p-8 rounded-lg shadow-lg flex flex-col justify-center">
-            <h3 className="text-xl font-semibold text-white mb-4">Contate-me</h3>
+            <h3 className="text-xl font-semibold text-gray-300 mb-4">Contate-me</h3>
             <ul className="text-gray-300 space-y-4 text-left w-full">
               <li className="flex items-center gap-3">
                 <FaEnvelope className="text-blue-400 text-xl" />

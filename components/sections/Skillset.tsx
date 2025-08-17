@@ -47,13 +47,13 @@ export default function Skillset() {
       <div className="container mx-auto px-4" data-aos="fade-up-right">
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-4">
-            <h2 className={`${unbounded.className} text-3xl font-bold text-white mb-2`}>
+            <h2 className={`${unbounded.className} text-3xl font-bold text-gray-300 mb-2`}>
               Skillset
             </h2>
             <div className="w-24 h-1 bg-[#f67800] mx-auto"></div>
           </div>
           <div className="text-center mb-8">
-            <p className="text-gray-300 leading-relaxed max-w-2xl mx-auto">
+            <p className="text-gray-400 leading-relaxed max-w-2xl mx-auto">
               Principais tecnologias e ferramentas que utilizo regularmente.
             </p>
           </div>

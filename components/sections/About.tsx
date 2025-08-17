@@ -12,12 +12,12 @@ const unbounded = Unbounded({
 export default function About() {
   
   return (
-    <section id="about" className="bg-[#000] relative w-full flex items-center justify-center py-20 scroll-mt-10">
+    <section id="about" className="bg-[#050505] relative w-full flex items-center justify-center py-20 scroll-mt-10">
       <div className="container mx-auto px-4" data-aos="fade-up">
         <div className="max-w-3xl mx-auto">
           {/* ===== TÍTULO DA SEÇÃO ===== */}
           <div className="text-center mb-10" data-aos="fade-down">
-            <h2 className={`${unbounded.className} text-3xl font-bold text-white mb-4`}>
+            <h2 className={`${unbounded.className} text-3xl font-bold text-gray-300 mb-4`}>
               Sobre Mim
             </h2>
             <div className="w-24 h-1 bg-[#f67800] mx-auto"></div>
@@ -25,14 +25,14 @@ export default function About() {
 
           {/* ===== DESCRIÇÃO CURTA ===== */}
           <div className="text-center mb-10" data-aos="fade-up" data-aos-delay="200">
-            <p className="text-gray-300 leading-relaxed max-w-2xl mx-auto">
+            <p className="text-gray-400 leading-relaxed max-w-2xl mx-auto">
               Sou um desenvolvedor apaixonado por tecnologia e inovação. Busco sempre aprender novas tecnologias e criar soluções criativas e eficientes para os desafios do mundo digital.
             </p>
           </div>
 
           {/* ===== HABILIDADES PRINCIPAIS ===== */}
           <div data-aos="fade-up" data-aos-delay="400">
-            <h4 className="text-lg font-semibold text-white mb-6 text-center">Habilidades Principais</h4>
+            <h4 className="text-lg font-semibold text-gray-300 mb-6 text-center">Habilidades Principais</h4>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <SkillCard
                 icon={<FaLaptopCode />}
