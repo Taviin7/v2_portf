@@ -1,14 +1,15 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { Unbounded } from 'next/font/google';
-import { IconArrowUpRight, IconBrandLinkedin, IconBrandGithub, IconMenu2 } from "@tabler/icons-react";
+import { IconArrowUpRight, IconBrandLinkedin, IconBrandGithub, IconMenu2, IconBrandDcos } from "@tabler/icons-react";
 import { Button } from "@/components/ui/button";
 import BlurText from "../ui/BlurText/BlurText";
 import Beams from "../ui/Beams/Beams";
 import DarkVeil from "../ui/DarkVeil/DarkVeil";
-import Navbar from "../ui/Navbar";  
+import LightRays from "../ui/LightRays/LightRays";
+import Navbar from "../ui/Navbar";
 import MobileSidebar from "../ui/MobileSidebar";
 
 // ===== CONFIGURAÇÃO DAS FONTES =====
@@ -21,6 +22,20 @@ const unbounded = Unbounded({
 export default function Hero() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
+  // Controlar overflow do body quando sidebar estiver aberto
+  useEffect(() => {
+    if (isSidebarOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+
+    // Cleanup function
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isSidebarOpen]);
+
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
@@ -31,20 +46,19 @@ export default function Hero() {
 
   return (
     <section id="hero" className="bg-foreground relative w-full min-h-screen flex items-center justify-center overflow-hidden scroll-mt-28">
+
       {/* Desktop Navbar */}
-      <Navbar />
-      
+      <Navbar /> 
+
       {/* Mobile Navbar */}
-      <nav className="fixed top-0 left-0 right-0 z-50 sm:hidden bg-[#050505] backdrop-blur-md border-b border-white/10">
+      <nav className="fixed top-0 left-0 right-0 z-50 sm:hidden bg-[#050505]/80 backdrop-blur-md border-b border-white/10">
         <div className="flex items-center justify-between px-4 py-3">
           {/* Logo/Brand */}
-          <div className="flex items-center">
-            <div className="w-8 h-8 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">OL</span>
-            </div>
-            <span className="ml-3 text-white font-semibold">Otavio Lago</span>
+          <div className="flex items-center text-gray-300">
+            <IconBrandDcos size={32} />
+            <span className="ml-3 text-gray-300 font-semibold">Otavio Lago</span>
           </div>
-          
+
           {/* Menu Button */}
           <button
             onClick={toggleSidebar}
@@ -60,18 +74,33 @@ export default function Hero() {
 
       {/* Mobile Sidebar */}
       <MobileSidebar isOpen={isSidebarOpen} onClose={closeSidebar} />
-      
-      <div style={{ width: '100%', height: '100vh', position: 'relative' }}>
-        <DarkVeil 
-          speed={1}
-          hueShift={45}
-          noiseIntensity={0}
-          scanlineFrequency={0}
-          warpAmount={1}
-        />
+
+      {/* BG ESTÁTICO
+      <div className="absolute inset-0">
+        <div className="relative h-full w-full bg-black [&>div]:absolute [&>div]:left-0 [&>div]:right-0 [&>div]:top-[-10%] [&>div]:h-[1000px] [&>div]:w-[1000px] [&>div]:rounded-full [&>div]:bg-[radial-gradient(circle_400px_at_50%_300px,#fbfbfb36,#000)]">
+          <div></div>
+        </div>
       </div>
+      */}
+
+      <div style={{ width: '100%', height: '100vh', position: 'relative' }}>
+        <Beams 
+          beamWidth={5}
+          beamHeight={25}
+          beamNumber={20}
+          lightColor="#ffffff"
+          speed={2}
+          noiseIntensity={1}
+          scale={0.2}
+          rotation={30} />
+      </div>
+
       {/* ===== CONTEÚDO CENTRAL ===== */}
-      <div className="absolute z-10 flex flex-col items-center justify-center px-4" data-aos="fade-up">
+      <div
+        className={`absolute z-10 flex flex-col items-center justify-center px-4 transition-all duration-300 ${isSidebarOpen ? 'pointer-events-none opacity-50' : 'pointer-events-auto opacity-100'
+          }`}
+        data-aos="fade-up"
+      >
         {/* ===== TÍTULO RESPONSIVO ===== */}
         {/* Título para mobile */}
         <BlurText
@@ -81,7 +110,7 @@ export default function Hero() {
           direction="top"
           className="block sm:hidden text-3xl font-[600] text-center text-gray-300 mb-6"
         />
-        
+
         {/* Título para desktop */}
         <BlurText
           text="Olá, eu sou o Otavio Lago!"
@@ -90,11 +119,11 @@ export default function Hero() {
           direction="top"
           className="hidden sm:block text-[4rem] font-[600] text-center text-gray-300"
         />
-        
+
         {/* ===== DESCRIÇÃO ===== */}
-          <p className="text-lg text-gray-300 max-w-2xl text-center mb-6">
-            Sou um desenvolvedor apaixonado por tecnologia, criando soluções criativas e eficientes. Bem-vindo ao meu portfólio!
-          </p>
+        <p className="text-lg text-gray-300 max-w-2xl text-center mb-6">
+          Sou um desenvolvedor apaixonado por tecnologia, criando soluções criativas e eficientes. Bem-vindo ao meu portfólio!
+        </p>
         {/* ===== BOTÕES ===== */}
         <div className="flex gap-3 items-center" data-aos="fade-right">
           <Link href="https://www.linkedin.com/in/otaviorlago/" target="_blank">
