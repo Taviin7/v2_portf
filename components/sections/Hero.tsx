@@ -51,7 +51,7 @@ export default function Hero() {
       <Navbar /> 
 
       {/* Mobile Navbar */}
-      <nav className="fixed top-0 left-0 right-0 z-50 sm:hidden bg-[#050505]/80 backdrop-blur-md border-b border-white/10">
+      <nav className="fixed top-0 left-0 right-0 z-50 sm:hidden bg-[#050505]/70 backdrop-blur-md border-b border-white/10">
         <div className="flex items-center justify-between px-4 py-3">
           {/* Logo/Brand */}
           <div className="flex items-center text-gray-300">
@@ -75,24 +75,30 @@ export default function Hero() {
       {/* Mobile Sidebar */}
       <MobileSidebar isOpen={isSidebarOpen} onClose={closeSidebar} />
 
-      {/* BG ESTÁTICO
-      <div className="absolute inset-0">
+      {/* BG ESTÁTICO */}
+      {/* <div className="absolute inset-0">
         <div className="relative h-full w-full bg-black [&>div]:absolute [&>div]:left-0 [&>div]:right-0 [&>div]:top-[-10%] [&>div]:h-[1000px] [&>div]:w-[1000px] [&>div]:rounded-full [&>div]:bg-[radial-gradient(circle_400px_at_50%_300px,#fbfbfb36,#000)]">
           <div></div>
         </div>
-      </div>
-      */}
+      </div> */}
 
-      <div style={{ width: '100%', height: '100vh', position: 'relative' }}>
-        <Beams 
-          beamWidth={5}
-          beamHeight={25}
-          beamNumber={20}
-          lightColor="#ffffff"
-          speed={2}
-          noiseIntensity={1}
-          scale={0.2}
-          rotation={30} />
+      {/* Background otimizado para mobile */}
+      <div className="absolute inset-0">
+        {/* Background simples para mobile */}
+        <div className="block sm:hidden absolute inset-0 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]"></div>
+        
+        {/* Beams apenas para desktop */}
+        <div className="hidden sm:block" style={{ width: '100%', height: '100vh', position: 'relative' }}>
+          <Beams 
+            beamWidth={5}
+            beamHeight={25}
+            beamNumber={20}
+            lightColor="#ffffff"
+            speed={2}
+            noiseIntensity={1}
+            scale={0.2}
+            rotation={30} />
+        </div>
       </div>
 
       {/* ===== CONTEÚDO CENTRAL ===== */}

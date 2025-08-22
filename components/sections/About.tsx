@@ -31,7 +31,7 @@ export default function About() {
 
           <div data-aos="fade-up" data-aos-delay="400">
             <h4 className="text-lg font-semibold text-gray-300 mb-6 text-center">Habilidades Principais</h4>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <SkillCard
                 icon={<FaLaptopCode />}
                 title="Desenvolvimento Full-Stack"

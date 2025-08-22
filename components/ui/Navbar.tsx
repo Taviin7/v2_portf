@@ -21,7 +21,7 @@ export default function Navbar() {
       <div className={`${geist.className} font-bold text-xl text-gray-300`}>
         <IconBrandDcos size={32} />
       </div>
-      {/* Navigation links - only visible on desktop */}
+      {/* visivel só no desktop */}
       <ul className="flex gap-6">
         <li className="hover:scale-105 transition-all duration-300">
           <Link href="#hero" className={`${geist.className} hover:underline text-gray-300`}>Início</Link>
