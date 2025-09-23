@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { Unbounded } from 'next/font/google';
-import { IconArrowUpRight, IconBrandLinkedin, IconBrandGithub, IconMenu2, IconBrandDcos } from "@tabler/icons-react";
+import { IconArrowUpRight, IconBrandLinkedin, IconBrandGithub, IconMenu2, IconBrandDcos, IconPdf, IconPinnedFilled, IconFileTypePdf } from "@tabler/icons-react";
 import { Button } from "@/components/ui/button";
 import BlurText from "../ui/BlurText/BlurText";
 import Beams from "../ui/Beams/Beams";
@@ -11,6 +11,8 @@ import DarkVeil from "../ui/DarkVeil/DarkVeil";
 import LightRays from "../ui/LightRays/LightRays";
 import Navbar from "../ui/Navbar";
 import MobileSidebar from "../ui/MobileSidebar";
+import { FaFilePdf, FaRegFilePdf } from "react-icons/fa";
+import { Download } from "lucide-react";
 
 // ===== CONFIGURAÇÃO DAS FONTES =====
 const unbounded = Unbounded({
@@ -51,7 +53,7 @@ export default function Hero() {
       <Navbar /> 
 
       {/* Mobile Navbar */}
-      <nav className="fixed top-0 left-0 right-0 z-50 sm:hidden bg-[#050505]/70 backdrop-blur-md border-b border-white/10">
+      <nav className="fixed top-0 left-0 right-0 z-50 lg:hidden bg-[#050505]/70 backdrop-blur-md border-b border-white/10">
         <div className="flex items-center justify-between px-4 py-3">
           {/* Logo/Brand */}
           <div className="flex items-center text-gray-300">
@@ -108,9 +110,9 @@ export default function Hero() {
         data-aos="fade-up"
       >
         {/* ===== TÍTULO RESPONSIVO ===== */}
-        {/* Título para mobile */}
+        {/* Título para smartphone */}
         <BlurText
-          text="Olá, sou o Otavio!"
+          text="Olá, sou o Otavio Lago!"
           delay={150}
           animateBy="words"
           direction="top"
@@ -131,17 +133,45 @@ export default function Hero() {
           Sou um desenvolvedor apaixonado por tecnologia, criando soluções criativas e eficientes. Bem-vindo ao meu portfólio!
         </p>
         {/* ===== BOTÕES ===== */}
-        <div className="flex gap-3 items-center" data-aos="fade-right">
-          <Link href="https://www.linkedin.com/in/otaviorlago/" target="_blank">
-            <Button variant="secondary" size="sm" className="text-gray-300 flex items-center gap-2 hover:bg-white/20 hover:scale-105 transition-all active:bg-orange-300 cursor-pointer backdrop-filter backdrop-blur-[10px] bg-white/5 bg-opacity-20 border-1 border-white/20">
-              <IconBrandLinkedin /> Linkedin <IconArrowUpRight />
-            </Button>
-          </Link>
-          <Link href="https://github.com/Taviin7" target="_blank">
-            <Button variant="secondary" size="sm" className="text-gray-300 flex items-center gap-2 hover:bg-white/20 hover:scale-105 transition-all duration-300 active:bg-orange-300 cursor-pointer backdrop-filter backdrop-blur-[10px] bg-white/5 bg-opacity-20 border-1 border-white/20">
-              <IconBrandGithub /> GitHub <IconArrowUpRight />
-            </Button>
-          </Link>
+        <div className="w-full" data-aos="fade-right">
+          {/* Mobile: dois botões lado a lado, currículo embaixo ocupando toda largura */}
+          <div className="flex flex-col gap-3 w-full sm:hidden">
+            <div className="flex gap-3 w-full">
+              <Link href="https://www.linkedin.com/in/otaviorlago/" target="_blank" className="w-1/2">
+                <Button variant="secondary" size="sm" className="w-full text-gray-300 flex items-center gap-2 hover:bg-white/20 hover:scale-105 transition-all active:bg-orange-300 cursor-pointer backdrop-filter backdrop-blur-[10px] bg-white/5 bg-opacity-20 border-1 border-white/20">
+                  <IconBrandLinkedin /> Linkedin <IconArrowUpRight />
+                </Button>
+              </Link>
+              <Link href="https://github.com/Taviin7" target="_blank" className="w-1/2">
+                <Button variant="secondary" size="sm" className="w-full text-gray-300 flex items-center gap-2 hover:bg-white/20 hover:scale-105 transition-all duration-300 active:bg-orange-300 cursor-pointer backdrop-filter backdrop-blur-[10px] bg-white/5 bg-opacity-20 border-1 border-white/20">
+                  <IconBrandGithub /> GitHub <IconArrowUpRight />
+                </Button>
+              </Link>
+            </div>
+            <Link href="/files/Otavio_Lago_CV.pdf" target="_blank" download className="w-full">
+              <Button variant="secondary" size="sm" className="w-full text-gray-300 flex items-center gap-2 hover:bg-white/20 hover:scale-105 transition-all duration-300 active:bg-orange-300 cursor-pointer backdrop-filter backdrop-blur-[10px] bg-white/5 bg-opacity-20 border-1 border-white/20">
+                <IconFileTypePdf /> Currículo <Download />
+              </Button>
+            </Link>
+          </div>
+          {/* Tablet/Desktop: lado a lado e centralizado */}
+          <div className="hidden sm:flex gap-3 items-center justify-center w-full">
+            <Link href="https://www.linkedin.com/in/otaviorlago/" target="_blank">
+              <Button variant="secondary" size="sm" className="text-gray-300 flex items-center gap-2 hover:bg-white/20 hover:scale-105 transition-all active:bg-orange-300 cursor-pointer backdrop-filter backdrop-blur-[10px] bg-white/5 bg-opacity-20 border-1 border-white/20">
+                <IconBrandLinkedin /> Linkedin <IconArrowUpRight />
+              </Button>
+            </Link>
+            <Link href="https://github.com/Taviin7" target="_blank">
+              <Button variant="secondary" size="sm" className="text-gray-300 flex items-center gap-2 hover:bg-white/20 hover:scale-105 transition-all duration-300 active:bg-orange-300 cursor-pointer backdrop-filter backdrop-blur-[10px] bg-white/5 bg-opacity-20 border-1 border-white/20">
+                <IconBrandGithub /> GitHub <IconArrowUpRight />
+              </Button>
+            </Link>
+            <Link href="/files/Otavio_Lago_CV.pdf" target="_blank" download>
+              <Button variant="secondary" size="sm" className="text-gray-300 flex items-center gap-2 hover:bg-white/20 hover:scale-105 transition-all duration-300 active:bg-orange-300 cursor-pointer backdrop-filter backdrop-blur-[10px] bg-white/5 bg-opacity-20 border-1 border-white/20">
+                <IconFileTypePdf /> Currículo <Download />
+              </Button>
+            </Link>
+          </div>
         </div>
       </div>
     </section>

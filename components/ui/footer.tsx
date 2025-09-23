@@ -4,7 +4,7 @@ import { IconBrandDcos } from "@tabler/icons-react";
 export default function Footer() {
   return (
 
-    <footer className="bg-[#050505] shadow-sm">
+    <footer className="bg-[#050505] shadow-sm border-t border-white/10">
       <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8">
         <div className="sm:flex sm:items-center sm:justify-between">
         <div className="flex items-center text-gray-300">
@@ -27,7 +27,7 @@ export default function Footer() {
           </ul>
         </div>
         <hr className="my-6 border-gray-400 sm:mx-auto lg:my-8" />
-        <span className="block text-sm text-gray-400 justify-center sm:text-center">© {new Date().getFullYear()} Otavio Lago. Feito com<span className="text-[#f67800]"> Next.js</span> & <span className="text-[#f67800]">Tailwind</span>.</span>
+        <span className="block text-sm text-gray-400 justify-center sm:text-center">© {new Date().getFullYear()} Otavio Lago. Feito com<span className="text-[#0674cf]"> Next.js</span> & <span className="text-[#0674cf]">Tailwind</span>.</span>
       </div>
     </footer>
 

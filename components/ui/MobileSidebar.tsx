@@ -28,21 +28,15 @@ export default function MobileSidebar({ isOpen, onClose }: MobileSidebarProps) {
       {/* Overlay melhorado */}
       {isOpen && (
         <div
-          className="fixed inset-0 bg-black/70 backdrop-blur-sm z-40 sm:hidden transition-opacity duration-300"
+          className="fixed inset-0 bg-black/70 backdrop-blur-sm z-40 transition-opacity duration-300"
           onClick={onClose}
-          onTouchMove={(e) => e.preventDefault()}
-          onWheel={(e) => e.preventDefault()}
-          style={{ 
-            pointerEvents: 'auto',
-            touchAction: 'none',
-            overscrollBehavior: 'none'
-          }}
+          style={{ pointerEvents: 'auto' }}
         />
       )}
 
       {/* Sidebar */}
       <aside
-        className={`fixed top-0 left-0 z-50 w-64 h-screen transition-transform duration-300 ease-in-out sm:hidden ${
+        className={`fixed top-0 left-0 z-50 w-64 h-screen transition-transform duration-300 ease-in-out lg:hidden ${
           isOpen ? 'translate-x-0' : '-translate-x-full'
         }`}
         aria-label="Sidebar"

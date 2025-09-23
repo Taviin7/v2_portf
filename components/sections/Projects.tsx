@@ -121,7 +121,7 @@ export default function Projects() {
                     <h2 className={`${unbounded.className} text-3xl font-bold text-gray-300 mb-4`}>
                         Projetos
                     </h2>
-                    <div className="w-24 h-1 bg-[#f67800] mx-auto"></div>
+                    <div className="w-24 h-1 bg-[#0674cf] mx-auto"></div>
                 </div>
 
                 {/* ===== DESCRIÇÃO CURTA ===== */}
@@ -185,7 +185,7 @@ export default function Projects() {
                                 onClick={() => scrollTo(index)} // Navega direto para o projeto
                                 className={`w-3 h-3 rounded-full transition-all duration-300 ${
                                     index === selectedIndex 
-                                        ? 'bg-[#f67800] scale-125' // Projeto ativo: laranja e maior
+                                        ? 'bg-[#0674cf] scale-125' // Projeto ativo: laranja e maior
                                         : 'bg-gray-600 hover:bg-gray-400' // Projetos inativos: cinza
                                 }`}
                                 aria-label={`Ir para projeto ${index + 1}`}

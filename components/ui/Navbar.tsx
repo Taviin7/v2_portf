@@ -17,7 +17,7 @@ const geist = Geist({
 
 export default function Navbar() {
   return (
-    <nav className="hidden sm:flex w-5xl items-center justify-between py-4 px-15 shadow-md fixed top-5 left-35 z-40 backdrop-filter backdrop-blur-[10px] bg-white/5 bg-opacity-20 rounded-full border-1 border-white/20 transition-all duration-300" data-aos="fade-down">
+    <nav className="hidden lg:flex w-5xl items-center justify-between py-4 px-15 shadow-md fixed top-5 left-35 z-40 backdrop-filter backdrop-blur-[10px] bg-white/5 bg-opacity-20 rounded-full border-1 border-white/20 transition-all duration-300" data-aos="fade-down">
       <div className={`${geist.className} font-bold text-xl text-gray-300`}>
         <IconBrandDcos size={32} />
       </div>

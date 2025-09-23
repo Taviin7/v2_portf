@@ -17,7 +17,7 @@ export default function Contato() {
           <h2 className={`${unbounded.className} text-3xl font-bold text-gray-300 mb-4`}>
             Contato
           </h2>
-          <div className="w-24 h-1 bg-[#f67800] mx-auto"></div>
+          <div className="w-24 h-1 bg-[#0674cf] mx-auto"></div>
         </div>
 
         {/* ===== DESCRIÇÃO CURTA ===== */}
@@ -32,19 +32,17 @@ export default function Contato() {
           <h3 className={`${unbounded.className} text-2xl font-semibold text-gray-300 text-center mb-8`}>
             Conecte-se Comigo
           </h3>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-2xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-2xl mx-auto">
             {/* LinkedIn */}
             <a
               href="https://www.linkedin.com/in/otaviorlago/"
               target="_blank"
               rel="noopener noreferrer"
-              className="group bg-[#1a1a1a] border border-gray-700 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 hover:border-gray-500"
+              className="group bg-gradient-to-br from-[#333]/80 to-[#0d0d0d] border border-gray-500/30 p-7 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 hover:border-gray-500 flex flex-col items-center hover:opacity-80"
             >
-              <div className="text-center">
-                <FaLinkedin className="text-blue-400 text-2xl mx-auto mb-3 group-hover:text-blue-300 transition-colors duration-300" />
-                <h4 className="text-gray-200 font-medium text-sm">LinkedIn</h4>
-                <p className="text-gray-400 text-xs mt-1">Profissional</p>
-              </div>
+              <FaLinkedin className="text-gray-300 text-4xl mb-2 group-hover:text-white transition-colors duration-300 drop-shadow-lg" />
+              <h4 className="text-gray-200 font-bold text-base">LinkedIn</h4>
+              <p className="text-gray-400 text-xs mt-1">Profissional</p>
             </a>
 
             {/* GitHub */}
@@ -52,53 +50,21 @@ export default function Contato() {
               href="https://github.com/otaviorlago"
               target="_blank"
               rel="noopener noreferrer"
-              className="group bg-[#1a1a1a] border border-gray-700 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 hover:border-gray-500"
+              className="group bg-gradient-to-br from-[#333]/80 to-[#0d0d0d] border border-gray-500/30 p-7 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 hover:border-gray-500 flex flex-col items-center hover:opacity-80"
             >
-              <div className="text-center">
-                <FaGithub className="text-gray-300 text-2xl mx-auto mb-3 group-hover:text-white transition-colors duration-300" />
-                <h4 className="text-gray-200 font-medium text-sm">GitHub</h4>
-                <p className="text-gray-400 text-xs mt-1">Código</p>
-              </div>
+              <FaGithub className="text-gray-300 text-4xl mb-2 group-hover:text-white transition-colors duration-300 drop-shadow-lg" />
+              <h4 className="text-gray-200 font-bold text-base">GitHub</h4>
+              <p className="text-gray-400 text-xs mt-1">Código</p>
             </a>
 
-            {/* Instagram */}
-            <a
-              href="https://instagram.com/otaviorlago"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group bg-[#1a1a1a] border border-gray-700 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 hover:border-gray-500"
-            >
-              <div className="text-center">
-                <FaInstagram className="text-pink-400 text-2xl mx-auto mb-3 group-hover:text-pink-300 transition-colors duration-300" />
-                <h4 className="text-gray-200 font-medium text-sm">Instagram</h4>
-                <p className="text-gray-400 text-xs mt-1">Social</p>
-              </div>
-            </a>
-
-            {/* WhatsApp */}
-            <a
-              href="https://wa.me/5511999999999"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group bg-[#1a1a1a] border border-gray-700 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 hover:border-gray-500"
-            >
-              <div className="text-center">
-                <FaWhatsapp className="text-green-400 text-2xl mx-auto mb-3 group-hover:text-green-300 transition-colors duration-300" />
-                <h4 className="text-gray-200 font-medium text-sm">WhatsApp</h4>
-                <p className="text-gray-400 text-xs mt-1">Mensagem</p>
-              </div>
-            </a>
-
-            {/* Email - Centralizado na última linha */}
+            {/* Email */}
             <a
               href="mailto:otaviorl711@gmail.com"
-              className="group bg-[#1a1a1a] border border-gray-700 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 hover:border-gray-500 col-span-2 md:col-span-2 md:col-start-2"
+              className="group bg-gradient-to-br from-[#333]/80 to-[#0d0d0d] border border-gray-500/30 p-7 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 hover:border-gray-500 flex flex-col items-center hover:opacity-80"
             >
-              <div className="text-center">
-                <FaEnvelope className="text-orange-400 text-2xl mx-auto mb-3 group-hover:text-orange-300 transition-colors duration-300" />
-                <h4 className="text-gray-200 font-medium text-sm">Email</h4>
-                <p className="text-gray-400 text-xs mt-1">Direto</p>
-              </div>
+              <FaEnvelope className="text-gray-300 text-4xl mb-2 group-hover:text-white transition-colors duration-300 drop-shadow-lg" />
+              <h4 className="text-gray-200 font-bold text-base">Email</h4>
+              <p className="text-gray-400 text-xs mt-1">Direto</p>
             </a>
           </div>
         </div>
