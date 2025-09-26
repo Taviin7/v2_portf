@@ -107,7 +107,7 @@ export default function Hero() {
 
       {/* ===== CONTEÚDO CENTRAL ===== */}
       <div
-        className={`absolute z-10 flex flex-col items-center justify-center px-4 transition-all duration-300 ${isSidebarOpen ? 'pointer-events-none opacity-50' : 'pointer-events-auto opacity-100'
+        className={`absolute z-10 flex flex-col items-center justify-center px-8 transition-all duration-300 ${isSidebarOpen ? 'pointer-events-none opacity-50' : 'pointer-events-auto opacity-100'
           }`}
         data-aos="fade-up"
       >

@@ -43,21 +43,21 @@ const sizeVariants = [
 
 export default function Skillset() {
   return (
-  <section id="skillset" className="bg-[#000] relative w-full flex items-center justify-center py-20 border-t border-white/10 scroll-mt-10">
-      <div className="container mx-auto px-4" data-aos="fade-up-right">
+  <section id="skillset" className="bg-[#050505] relative w-full flex items-center justify-center py-20 border-t border-white/10 scroll-mt-10">
+      <div className="container mx-auto px-6 sm:px-8" data-aos="fade-up-right">
         <div className="max-w-3xl mx-auto">
-          <div className="text-center mb-4">
-            <h2 className={`${unbounded.className} text-3xl font-bold text-gray-300 mb-2`}>
+          <div className="text-center mb-6">
+            <h2 className={`${unbounded.className} text-3xl font-bold text-gray-300 mb-4`}>
               Skillset
             </h2>
             <div className="w-24 h-1 bg-[#0674cf] mx-auto"></div>
           </div>
-          <div className="text-center mb-8">
-            <p className="text-gray-400 leading-relaxed max-w-2xl mx-auto">
-              Principais tecnologias e ferramentas que utilizo regularmente.
+          <div className="text-center mb-10">
+            <p className="text-gray-400 leading-relaxed max-w-2xl mx-auto text-center">
+              Algumas das tecnologias e ferramentas que conheço e utilizo regularmente.
             </p>
           </div>
-          <div className="flex flex-wrap gap-3 justify-center" data-aos="fade-up-left">
+          <div className="flex flex-wrap gap-3 justify-center max-w-2xl mx-auto px-4 sm:px-0" data-aos="fade-up-left">
             {skills.map((skill, idx) => (
               <Badge
                 key={idx}

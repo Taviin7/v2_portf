@@ -23,22 +23,22 @@ export default function Projects() {
     // - dragFree: false = snap automático após arrastar (não fica "solto")
     // - containScroll: 'trimSnaps' = mantém os slides alinhados corretamente
     // - Autoplay: plugin para reprodução automática dos slides
-    const [emblaRef, emblaApi] = useEmblaCarousel({ 
+    const [emblaRef, emblaApi] = useEmblaCarousel({
         loop: true,
         align: 'center',
         skipSnaps: false,
         dragFree: false,
         containScroll: 'trimSnaps'
     }, [Autoplay({ delay: 4000, stopOnInteraction: false })]);
-    
-    {/* ===== ESTADOS DO CARROSSEL ===== */}
-    {/* selectedIndex: índice do projeto atualmente visível (0, 1, 2...) */}
-    {/* scrollSnaps: array com as posições de snap de cada projeto */}
+
+    {/* ===== ESTADOS DO CARROSSEL ===== */ }
+    {/* selectedIndex: índice do projeto atualmente visível (0, 1, 2...) */ }
+    {/* scrollSnaps: array com as posições de snap de cada projeto */ }
     const [selectedIndex, setSelectedIndex] = useState(0);
     const [scrollSnaps, setScrollSnaps] = useState<number[]>([]);
 
-    {/* ===== DADOS DOS PROJETOS ===== */}
-    {/* Array com informações de cada projeto para renderizar no carrossel */}
+    {/* ===== DADOS DOS PROJETOS ===== */ }
+    {/* Array com informações de cada projeto para renderizar no carrossel */ }
     const projects = [
         {
             title: "ProveIt",
@@ -63,50 +63,50 @@ export default function Projects() {
         }
     ];
 
-    {/* ===== FUNÇÕES DE CONTROLE DO CARROSSEL ===== */}
-    
-    {/* onSelect: Executada sempre que o usuário navega para um novo projeto */}
-    {/* Atualiza o selectedIndex para refletir o projeto atualmente visível */}
+    {/* ===== FUNÇÕES DE CONTROLE DO CARROSSEL ===== */ }
+
+    {/* onSelect: Executada sempre que o usuário navega para um novo projeto */ }
+    {/* Atualiza o selectedIndex para refletir o projeto atualmente visível */ }
     const onSelect = useCallback(() => {
         if (!emblaApi) return;
         setSelectedIndex(emblaApi.selectedScrollSnap());
     }, [emblaApi]);
 
-    {/* scrollTo: Navega diretamente para um projeto específico pelo índice */}
-    {/* Usado pelos indicadores de página (pontos clicáveis) */}
+    {/* scrollTo: Navega diretamente para um projeto específico pelo índice */ }
+    {/* Usado pelos indicadores de página (pontos clicáveis) */ }
     const scrollTo = useCallback((index: number) => {
         if (!emblaApi) return;
         emblaApi.scrollTo(index);
     }, [emblaApi]);
 
-    {/* scrollPrev: Navega para o projeto anterior */}
-    {/* Se estiver no primeiro, vai para o último (devido ao loop: true) */}
+    {/* scrollPrev: Navega para o projeto anterior */ }
+    {/* Se estiver no primeiro, vai para o último (devido ao loop: true) */ }
     const scrollPrev = useCallback(() => {
         if (!emblaApi) return;
         emblaApi.scrollPrev();
     }, [emblaApi]);
 
-    {/* scrollNext: Navega para o próximo projeto */}
-    {/* Se estiver no último, vai para o primeiro (devido ao loop: true) */}
+    {/* scrollNext: Navega para o próximo projeto */ }
+    {/* Se estiver no último, vai para o primeiro (devido ao loop: true) */ }
     const scrollNext = useCallback(() => {
         if (!emblaApi) return;
         emblaApi.scrollNext();
     }, [emblaApi]);
 
-    {/* ===== EFEITOS E EVENTOS ===== */}
-    {/* useEffect: Configura os event listeners do carrossel quando a API está disponível */}
+    {/* ===== EFEITOS E EVENTOS ===== */ }
+    {/* useEffect: Configura os event listeners do carrossel quando a API está disponível */ }
     React.useEffect(() => {
         if (!emblaApi) return;
 
-        {/* Configura o estado inicial */}
+        {/* Configura o estado inicial */ }
         onSelect();
         setScrollSnaps(emblaApi.scrollSnapList());
-        
-        {/* Adiciona listeners para eventos de mudança de slide */}
-        emblaApi.on('select', onSelect);        {/* Quando um novo projeto é selecionado */}
-        emblaApi.on('reInit', onSelect);        {/* Quando o carrossel é reinicializado */}
-        
-        {/* Cleanup: Remove os listeners quando o componente é desmontado */}
+
+        {/* Adiciona listeners para eventos de mudança de slide */ }
+        emblaApi.on('select', onSelect); {/* Quando um novo projeto é selecionado */ }
+        emblaApi.on('reInit', onSelect); {/* Quando o carrossel é reinicializado */ }
+
+        {/* Cleanup: Remove os listeners quando o componente é desmontado */ }
         return () => {
             emblaApi.off('select', onSelect);
             emblaApi.off('reInit', onSelect);
@@ -114,10 +114,9 @@ export default function Projects() {
     }, [emblaApi, onSelect]);
 
     return (
-        <section id="projects" className="bg-[#000] relative w-full flex items-center justify-center py-20 border-t border-white/10 scroll-mt-10">
-            <div className="container mx-auto px-4">
-                {/* ===== TÍTULO DA SEÇÃO ===== */}
-                <div className="text-center mb-10" data-aos="fade-up">
+        <section id="projects" className="bg-[#050505] relative w-full flex items-center justify-center py-20 border-t border-white/10 scroll-mt-10">
+            <div className="container mx-auto px-2 sm:px-8" data-aos="fade-up">
+                <div className="text-center mb-6">
                     <h2 className={`${unbounded.className} text-3xl font-bold text-gray-300 mb-4`}>
                         Projetos
                     </h2>
@@ -126,7 +125,7 @@ export default function Projects() {
 
                 {/* ===== DESCRIÇÃO CURTA ===== */}
                 <div className="text-center mb-10" data-aos="fade-up">
-                    <p className="text-gray-400 leading-relaxed max-w-2xl mx-auto">
+                    <p className="text-gray-400 leading-relaxed max-w-2xl mx-auto text-center">
                         Aqui você pode ver alguns dos meus projetos feitos durante minha jornada como desenvolvedor.
                     </p>
                 </div>
@@ -138,11 +137,11 @@ export default function Projects() {
                     <div className="absolute left-0 top-0 w-16 h-full bg-gradient-to-r from-black to-transparent z-10 pointer-events-none hidden sm:block "></div>
                     {/* Blur direito - fora do container do carrossel */}
                     <div className="absolute right-0 top-0 w-16 h-full bg-gradient-to-l from-black to-transparent z-10 pointer-events-none hidden sm:block"></div>
-                    
+
                     {/* ===== CONTAINER PRINCIPAL DO CARROSSEL ===== */}
                     {/* emblaRef: Referência que o Embla usa para controlar o carrossel */}
                     {/* overflow-hidden: Esconde projetos fora da área visível */}
-                    <div className="overflow-hidden md:px-8 relative" ref={emblaRef}>
+                    <div className="overflow-hidden relative" ref={emblaRef}>
                         {/* ===== CONTAINER DOS SLIDES ===== */}
                         {/* flex: Organiza os projetos horizontalmente */}
                         <div className="flex">
@@ -153,14 +152,13 @@ export default function Projects() {
                                 // min-w-0: Permite que o projeto seja redimensionado
                                 // pl-4: Padding à esquerda para espaçamento entre projetos
                                 <div key={index} className="flex-[0_0_100%] md:flex-[0_0_60%] min-w-0 px-4">
-                                    <div 
-                                        className={`transition-all duration-500 ease-in-out ${
-                                            index === selectedIndex 
-                                                ? 'scale-100 opacity-100' // Projeto ativo: tamanho normal e opaco
-                                                : index === selectedIndex - 1 || index === selectedIndex + 1 
-                                                    ? 'scale-70 md:scale-85 opacity-60 md:opacity-60' // Projetos adjacentes: normais no mobile, menores no desktop
-                                                    : 'scale-70 md:scale-75 opacity-30 md:opacity-30' // Outros projetos: normais no mobile, pequenos no desktop
-                                        }`}
+                                    <div
+                                        className={`transition-all duration-500 ease-in-out ${index === selectedIndex
+                                            ? 'scale-100 opacity-100' // Projeto ativo: tamanho normal e opaco
+                                            : index === selectedIndex - 1 || index === selectedIndex + 1
+                                                ? 'scale-70 md:scale-85 opacity-60 md:opacity-60' // Projetos adjacentes: normais no mobile, menores no desktop
+                                                : 'scale-70 md:scale-75 opacity-30 md:opacity-30' // Outros projetos: normais no mobile, pequenos no desktop
+                                            }`}
                                     >
                                         <ProjectCard
                                             title={project.title}
@@ -183,11 +181,10 @@ export default function Projects() {
                             <button
                                 key={index}
                                 onClick={() => scrollTo(index)} // Navega direto para o projeto
-                                className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                                    index === selectedIndex 
-                                        ? 'bg-[#0674cf] scale-125' // Projeto ativo: laranja e maior
-                                        : 'bg-gray-600 hover:bg-gray-400' // Projetos inativos: cinza
-                                }`}
+                                className={`w-3 h-3 rounded-full transition-all duration-300 ${index === selectedIndex
+                                    ? 'bg-[#0674cf] scale-125' // Projeto ativo: laranja e maior
+                                    : 'bg-gray-600 hover:bg-gray-400' // Projetos inativos: cinza
+                                    }`}
                                 aria-label={`Ir para projeto ${index + 1}`}
                             />
                         ))}
@@ -200,8 +197,8 @@ export default function Projects() {
                             {selectedIndex + 1} de {projects.length}
                         </span>
                     </div>
-
                 </div>
+
             </div>
         </section>
     )
