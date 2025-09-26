@@ -48,18 +48,18 @@ export default function About() {
   ];
 
   return (
-    <section id="about" className="bg-[#050505] relative w-full flex items-center justify-center py-20 scroll-mt-10">
+  <section id="about" className="bg-[#050505] relative w-full flex items-center justify-center py-20 scroll-mt-10">
       <div className="container mx-auto px-4" data-aos="fade-up">
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-3xl mx-auto  border border-white/10 shadow-lg backdrop-blur-md p-6">
           {/* ===== TÍTULO DA SEÇÃO ===== */}
-          <div className="text-center mb-10" data-aos="fade-down">
+          <div className="text-center border border-white/10  shadow-sm p-6" data-aos="fade-down">
             <h2 className={`${unbounded.className} text-3xl font-bold text-gray-300 mb-4`}>
               Sobre Mim
             </h2>
-            <div className="w-24 h-1 bg-[#0674cf] mx-auto"></div> //#f67800
+            <div className="w-24 h-1 bg-[#0674cf] mx-auto"></div>
           </div>
 
-          <div className="text-center mb-10" data-aos="fade-up" data-aos-delay="200">
+          <div className="text-center border border-white/10 shadow-sm p-6" data-aos="fade-up" data-aos-delay="200">
             <p className="text-gray-400 leading-relaxed max-w-2xl mx-auto">
               Sou um desenvolvedor apaixonado por tecnologia e inovação. Busco sempre aprender novas tecnologias e criar soluções criativas e eficientes para os desafios do mundo digital.
             </p>
@@ -85,7 +85,7 @@ export default function About() {
           */}
 
           {/* Habilidades principais */}
-          <div className="mt-10" data-aos="fade-up" data-aos-delay="500">
+          <div className="border border-white/10 shadow-sm p-6" data-aos="fade-up" data-aos-delay="500">
             <h4 className="text-lg font-semibold text-gray-300 mb-6 text-center">Habilidades Principais</h4>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <SkillCard

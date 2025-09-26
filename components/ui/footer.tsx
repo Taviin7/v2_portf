@@ -27,7 +27,7 @@ export default function Footer() {
           </ul>
         </div>
         <hr className="my-6 border-gray-400 sm:mx-auto lg:my-8" />
-        <span className="block text-sm text-gray-400 justify-center sm:text-center">© {new Date().getFullYear()} Otavio Lago. Feito com<span className="text-[#0674cf]"> Next.js</span> & <span className="text-[#0674cf]">Tailwind</span>.</span>
+        <span className="block text-sm text-gray-400 justify-center text-center sm:text-center">© {new Date().getFullYear()} Otavio Lago. Feito com<span className="text-[#0674cf]"> Next.js</span> & <span className="text-[#0674cf]">Tailwind</span>.</span>
       </div>
     </footer>
 

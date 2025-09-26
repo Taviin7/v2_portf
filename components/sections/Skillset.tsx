@@ -43,7 +43,7 @@ const sizeVariants = [
 
 export default function Skillset() {
   return (
-    <section id="skillset" className="bg-[#000] relative w-full flex items-center justify-center py-20 border-t border-white/10 scroll-mt-10">
+  <section id="skillset" className="bg-[#000] relative w-full flex items-center justify-center py-20 border-t border-white/10 scroll-mt-10">
       <div className="container mx-auto px-4" data-aos="fade-up-right">
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-4">
