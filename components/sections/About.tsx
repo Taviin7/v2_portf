@@ -65,7 +65,7 @@ export default function About() {
             </p>
           </div>
 
-          {/* Timeline horizontal */}
+          {/* Timeline horizontal 
           <div className="w-full flex flex-col items-center mb-10 hidden sm:block">
             <h4 className="text-lg font-semibold text-gray-300 mb-6">Minha Jornada</h4>
             <Timeline defaultValue={3} orientation="horizontal">
@@ -82,6 +82,7 @@ export default function About() {
               ))}
             </Timeline>
           </div>
+          */}
 
           {/* Habilidades principais */}
           <div className="mt-10" data-aos="fade-up" data-aos-delay="500">

@@ -23,15 +23,13 @@ export default function Contato() {
         {/* ===== DESCRIÇÃO CURTA ===== */}
         <div className="text-center mb-10">
           <p className="text-gray-400 leading-relaxed max-w-2xl mx-auto">
-            Tem interesse em trabalhar comigo ou quer bater um papo? Preencha o formulário abaixo e entrarei em contato!
+            Tem interesse em trabalhar comigo ou quer bater um papo? Escolha a melhor forma de entrar em contato!
           </p>
         </div>
 
         {/* ===== CARDS DE REDES SOCIAIS ===== */}
         <div className="mb-12">
-          <h3 className={`${unbounded.className} text-2xl font-semibold text-gray-300 text-center mb-8`}>
-            Conecte-se Comigo
-          </h3>
+          
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-2xl mx-auto">
             {/* LinkedIn */}
             <a
@@ -47,7 +45,7 @@ export default function Contato() {
 
             {/* GitHub */}
             <a
-              href="https://github.com/otaviorlago"
+              href="https://github.com/Taviin7"
               target="_blank"
               rel="noopener noreferrer"
               className="group bg-gradient-to-br from-[#333]/80 to-[#0d0d0d] border border-gray-500/30 p-7 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 hover:border-gray-500 flex flex-col items-center hover:opacity-80"
