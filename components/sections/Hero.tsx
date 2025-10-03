@@ -50,7 +50,7 @@ export default function Hero() {
     <section id="hero" className="bg-foreground relative w-full min-h-screen flex items-center justify-center overflow-hidden scroll-mt-28">
 
       {/* Desktop Navbar */}
-      <Navbar /> 
+      <Navbar />
 
       {/* Mobile Navbar */}
       <nav className="fixed top-0 left-0 right-0 z-50 lg:hidden bg-[#050505]/70 backdrop-blur-md border-b border-white/10" data-aos="fade-down">
@@ -93,7 +93,7 @@ export default function Hero() {
         </div>
         {/* Beams apenas para desktop */}
         <div className="hidden sm:block" style={{ width: '100%', height: '100vh', position: 'relative' }}>
-          <Beams 
+          <Beams
             beamWidth={5}
             beamHeight={25}
             beamNumber={20}
@@ -150,7 +150,7 @@ export default function Hero() {
                 </Button>
               </Link>
             </div>
-            <Link href="/files/Otavio_Lago_CV.pdf" target="_blank" download className="w-full">
+            <Link href="/files/Curriculo-OtavioLago.pdf" target="_blank" download className="w-full">
               <Button variant="secondary" size="sm" className="w-full text-gray-300 flex items-center gap-2 hover:bg-white/20 hover:scale-105 transition-all duration-300 active:bg-orange-300 cursor-pointer backdrop-filter backdrop-blur-[10px] bg-white/5 bg-opacity-20 border-1 border-white/20">
                 <IconFileTypePdf /> Currículo <Download />
               </Button>
@@ -168,7 +168,7 @@ export default function Hero() {
                 <IconBrandGithub /> GitHub <IconArrowUpRight />
               </Button>
             </Link>
-            <Link href="/files/Otavio_Lago_CV.pdf" target="_blank" download>
+            <Link href="/files/Curriculo-OtavioLago.pdf" target="_blank" download>
               <Button variant="secondary" size="sm" className="text-gray-300 flex items-center gap-2 hover:bg-white/20 hover:scale-105 transition-all duration-300 active:bg-orange-300 cursor-pointer backdrop-filter backdrop-blur-[10px] bg-white/5 bg-opacity-20 border-1 border-white/20">
                 <IconFileTypePdf /> Currículo <Download />
               </Button>
