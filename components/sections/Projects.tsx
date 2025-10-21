@@ -6,6 +6,7 @@ import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import anagrama from '@/public/assets/anagrama.png';
 import proveit from '@/public/assets/proveit.png';
 import quickjobs from '@/public/assets/quick-jobs.jpg';
+import gestaoJAVA from '@/public/assets/gestaoJAVA.png';
 import Autoplay from 'embla-carousel-autoplay';
 
 const unbounded = Unbounded({
@@ -48,11 +49,11 @@ export default function Projects() {
             tags: ["React Native", "C#", "MySQL"]
         },
         {
-            title: "QuickJobs",
-            description: "Site de buscas e divulgação de empregos, com uma interface de fácil interatividade, com integração a API, para acesso ao banco de dados.",
-            image: quickjobs.src,
-            link: "https://github.com/Taviin7/quickjobs",
-            tags: ["React", "MySQL", "API"]
+            title: "Sistema de Compras e Vendas",
+            description: "Sistema de gestão de compras e vendas, com lançamento de notas fiscais, além de gerar PDF para impressão. Possui integração a API, para acesso ao banco de dados.",
+            image: gestaoJAVA.src,
+            link: "https://github.com/Taviin7/Sistema_ComprasVendas",
+            tags: ["Java", "MySQL"]
         },
         {
             title: "Anagrama",
