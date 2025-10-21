@@ -50,7 +50,7 @@ export default function Projects() {
         },
         {
             title: "Sistema de Compras e Vendas",
-            description: "Sistema de gestão de compras e vendas, com lançamento de notas fiscais, além de gerar PDF para impressão. Possui integração a API, para acesso ao banco de dados.",
+            description: "Sistema desktop em Java com arquitetura em camadas, utilizando o padrão DAO para acesso ao banco de dados e Swing para interface gráfica. O sistema realiza operações CRUD para gerenciamento de clientes, fornecedores, produtos e notas fiscais.",
             image: gestaoJAVA.src,
             link: "https://github.com/Taviin7/Sistema_ComprasVendas",
             tags: ["Java", "MySQL"]
