@@ -50,7 +50,7 @@ export default function Projects() {
         },
         {
             title: "Sistema de Compras e Vendas",
-            description: "Sistema desktop em Java com arquitetura em camadas, utilizando o padrão DAO para acesso ao banco de dados e Swing para interface gráfica. O sistema realiza operações CRUD para gerenciamento de clientes, fornecedores, produtos e notas fiscais.",
+            description: "Sistema desktop em Java com arquitetura em camadas, utilizando o padrão DAO para acesso ao banco de dados e Swing para interface gráfica.",
             image: gestaoJAVA.src,
             link: "https://github.com/Taviin7/Sistema_ComprasVendas",
             tags: ["Java", "MySQL"]
