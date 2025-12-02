@@ -135,10 +135,9 @@ export default function Projects() {
                 <div className="relative max-w-3xl mx-auto" data-aos="fade-up">
                     {/* ===== EFEITOS DE BLUR NAS BORDAS ===== */}
                     {/* Blur esquerdo - fora do container do carrossel */}
-                    <div className="absolute left-0 top-0 w-16 h-full bg-gradient-to-r from-black to-transparent z-10 pointer-events-none hidden sm:block "></div>
-                    {/* Blur direito - fora do container do carrossel */}
-                    <div className="absolute right-0 top-0 w-16 h-full bg-gradient-to-l from-black to-transparent z-10 pointer-events-none hidden sm:block"></div>
-
+<div className="absolute left-0 top-0 w-16 h-full bg-gradient-to-r from-[#050505] to-transparent z-10 pointer-events-none hidden sm:block "></div>
+{/* Blur direito - fora do container do carrossel */}
+<div className="absolute right-0 top-0 w-16 h-full bg-gradient-to-l from-[#050505] to-transparent z-10 pointer-events-none hidden sm:block"></div>
                     {/* ===== CONTAINER PRINCIPAL DO CARROSSEL ===== */}
                     {/* emblaRef: Referência que o Embla usa para controlar o carrossel */}
                     {/* overflow-hidden: Esconde projetos fora da área visível */}
